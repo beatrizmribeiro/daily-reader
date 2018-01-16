@@ -104,8 +104,100 @@ $("#run-search").on("click", function(event) {
   
   runQuery(numResults, queryURL);
 });
+
+$("#button1").on("click", function(event){
+  buttonSearch = document.getElementsByName("Trump");
+  console.log(buttonSearch)
+  var queryURL = queryURLBase + buttonSearch
+})
 // This button clears the top articles section
 $("#clear-all").on("click", function() {
   articleCounter = 0;
   $("#well-section").empty();
 });
+
+
+//pulls an article by search term
+
+// var url = 'https://newsapi.org/v2/everything?' +
+//           'q=Apple&' +
+//           'from=2018-01-16&' +
+//           'sortBy=popularity&' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+
+// var req = new Request(url);
+
+// fetch(req)
+
+//     .then(function(response) {
+//         console.log(response.json());
+//     })
+
+//pulls an article by topic  
+
+//Business (wall street Journal)
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=the-wall-street-journal&' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+
+//entertainment buzzfeed
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=buzzfeed&' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+
+//entertainment   Entertainment weekly
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=entertainment-weekly &' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+
+// //Health -- Medical News Today
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=medical-news-today &' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+
+//Sports -- ESPN
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=espn &' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+
+//Tech -- HackerNEWS
+
+// var url = 'https://newsapi.org/v2/top-headlines?' +
+//           'sources=hacker-news &' +
+//           'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+// var req = new Request(url);
+// fetch(req)
+//     .then(function(response) {
+//         console.log(response.json());
+//     }) 
+

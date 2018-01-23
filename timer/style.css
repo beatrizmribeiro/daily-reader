@@ -1,0 +1,32 @@
+#header{
+	text-align: center;
+}
+
+#time{
+	text-align: center;
+}
+
+#minutes{
+	border-width: 10px;
+	border-color: orange;
+	border-style: double;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #6bf442;
+
+}
+
+#seconds{
+	border-width: 10px;
+	border-color: orange;
+	border-style: double;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #6bf442;
+}

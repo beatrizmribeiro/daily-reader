@@ -117,6 +117,10 @@ $("#clear-all").on("click", function() {
 });
 
 
+
+
+
+
 //pulls an article by search term
 
 // var url = 'https://newsapi.org/v2/everything?' +

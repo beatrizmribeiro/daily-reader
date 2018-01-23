@@ -1,5 +1,5 @@
 // 10 minutes from now
-var time_in_minutes = 1;
+var time_in_minutes = 30;
 var current_time = Date.parse(new Date());
 var deadline = new Date(current_time + time_in_minutes*60*1000);
 var timeUp
@@ -10,7 +10,7 @@ var audio = new Audio("ding.wav");
 
 $( "#start" ).click(function() {
 
-  setTimeout(timeUp, 1000 * 15);
+  setTimeout(timeUp, 1000 * 1800);
 
 function time_remaining(endtime){
   var t = Date.parse(endtime) - Date.parse(new Date());

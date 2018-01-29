@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Life Line</title>
+    <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
     <link rel="stylesheet" href="https://headervideo.github.io/hvheadervideo/css/fontawesome.min.css">
     <link href="https://headervideo.github.io/hvheadervideo/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
@@ -79,6 +80,7 @@
             </div>
         </div>
 <div class="py-2"></div>
+<canvas id="demoCanvas" width="500" height="300"></canvas>
 
 <!-- <div class="container-fluid">
     <div class="row">
@@ -108,6 +110,21 @@
     <script src="https://headervideo.github.io/hvheadervideo/js/jarallax-video.js"></script>
    <script>
        new WOW().init();
+   </script>
+   <script>
+
+    function init() {
+
+        var stage = new createjs.Stage("demoCanvas");
+        var text = new createjs.Text("Life Line!", "20px Arial", "#ff7700");
+        text.x = 250;
+        text.y = 150;
+        text.textBaseline = "alphabetic";
+        stage.addChild(text);
+        stage.update();
+
+    }
+    
    </script>
 </body>
 </html>

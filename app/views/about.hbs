@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title> About </title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Life Line</title>
+      <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+	<link rel="stylesheet" href="https://headervideo.github.io/hvheadervideo/css/fontawesome.min.css">
+	<link href="https://headervideo.github.io/hvheadervideo/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
+	<link href="https://headervideo.github.io/hvheadervideo/css/style.css" rel="stylesheet">
+
+</head>
+
+<body onload="init();">
+
+      <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      	<a class="navbar-brand" href="/"><img src="/public/logo.png" width="70" alt="logo"></a>
+      	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+      	aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      	<div class="collapse navbar-collapse " id="navbarSupportedContent">
+      	     <ul class="navbar-nav mr-auto">
+      	     <li class="nav-item active">
+      	           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      	     </li>
+      	     <li class="nav-item active">
+      	           <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link" href="#"><i class="fa fa-facebook-f"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link" href="#"><i class="fa fa-pinterest"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link" href="#"><i class="fa fa-tumblr"></i></a>
+      	     </li>
+      	     </ul>
+      	     <ul class="navbar-nav ml-auto nav-flex-icons">
+      	     <li class="nav-item">
+      	           <a class="nav-link waves-effect waves-light">14 <i class="fa fa-envelope"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link waves-effect waves-light">8 <i class="fa fa-eye"></i></a>
+      	     </li>
+      	     <li class="nav-item">
+      	           <a class="nav-link waves-effect waves-light">1 <i class="fa fa-bullhorn"></i></a>
+      	     </li>
+      	     </ul>
+      	</div>
+      </nav>
+      </header>
+
+      <canvas id="demoCanvas" width="1000" height="300"></canvas>
+
+      <script>
+
+          function init() {
+
+              var stage = new createjs.Stage("demoCanvas");
+              var text = new createjs.Text("Life Line!", "40px Georgia, serif", "red");
+              text.x = 590;
+              text.y = 150;
+              text.textBaseline = "alphabetic";
+              stage.addChild(text);
+              stage.update();
+
+          }
+          
+      </script>
+
+</body>
+</html>

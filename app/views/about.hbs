@@ -9,6 +9,7 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<title>Life Line</title>
       <script src="https://code.createjs.com/easeljs-0.8.2.min.js"></script>
+      <script src="https://code.createjs.com/tweenjs-0.6.2.min.js"></script>
 	<link rel="stylesheet" href="https://headervideo.github.io/hvheadervideo/css/fontawesome.min.css">
 	<link href="https://headervideo.github.io/hvheadervideo/css/bootstrap.min.css" rel="stylesheet">
 	<link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
@@ -68,13 +69,19 @@
 
           function init() {
 
-              var stage = new createjs.Stage("demoCanvas");
-              var text = new createjs.Text("Life Line!", "40px Georgia, serif", "red");
-              text.x = 590;
-              text.y = 150;
-              text.textBaseline = "alphabetic";
-              stage.addChild(text);
-              stage.update();
+            var stage = new createjs.Stage("demoCanvas");
+            var text = new createjs.Text("Life Line!", "40px Georgia, serif", "red");
+            text.x = 590;
+            text.y = 150;
+            text.textBaseline = "alphabetic";
+            stage.addChild(text);
+
+            createjs.Tween.get(text, { loop: true })
+                  .to({ alpha: 0 }, 2000, createjs.Ease.getPowInOut(4));
+
+            createjs.Ticker.setFPS(60);
+            createjs.Ticker.addEventListener("tick", stage);
+              // stage.update();
 
           }
           

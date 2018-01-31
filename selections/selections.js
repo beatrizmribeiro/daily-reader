@@ -1,5 +1,5 @@
 function newsGetter() {
-    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=the-new-york-times &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=associated-press &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
     console.log("query " + queryURL)
 
     $("#news").click(function() {
@@ -58,7 +58,7 @@ newsGetter()
 
 
 function businessGetter() {
-    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=the-wall-street-journal &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=the-economist &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
     console.log("query " + queryURL)
 
     $("#business").click(function() {
@@ -116,7 +116,7 @@ businessGetter()
 
 function sportsGetter() {
     
-    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=espn &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=bleacher-report &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
     console.log("query " + queryURL)
 
     $("#sports").click(function() {
@@ -231,66 +231,108 @@ function entertainmentGetter() {
 
 entertainmentGetter()
 
-// function imageGetter() {
-//     var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=the-new-york-times &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
-//     console.log("query " + queryURL)
 
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     })
+function healthGetter() {
 
-//     .done(function(response, body, articleTitles){
-//       console.log("resp : " + response)
-//       var parsedRes = response.articles
-//       var articleTitles = [];
-//       var images = "";
-//       // var url = []
-//       for (var i = 0; i < parsedRes.length; i++) {
-//           parsedRes[i]
-//           console.log(parsedRes[i])
-//           var image = parsedRes[i].urlToImage 
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=medical-news-today &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+    console.log("query " + queryURL)
+ 
+    $("#health").click(function() {
+    
 
-//       }
-  
-//   $("#news").click(function() {
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
 
-//     // $("#article_display").text("headline : " + articleTitles);
-//     // $("#image_display").text("Image Urls : " + imageUrls);
-//     var img = $('<img />', {src : image + $('#image_display').val()});
-//     img.appendTo('#image_display'); 
+    .done(function(response, body){
+      console.log("resp : " + response)
+      var parsedRes = response.articles
+      var articleTitles = [];
+      var images = "";
+      var titles;
+      for (var i = 0; i < parsedRes.length; i++) {
+        parsedRes[i]
+          // var formattedTitles = parsedRes[i].split(",").join("<br />")
 
 
-//        })
-//     })
-//   }    
-// imageGetter()
+          var articleString = articleTitles.push(parsedRes[i].title)
+          // articleTitles.split(',').join("<br />")
 
-
-// function imageGetter() {
-//     var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=the-new-york-times &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
-//     console.log("query " + queryURL)
-
-//     $.ajax({
-//       url: queryURL,
-//       method: "GET"
-//     })
-
-//     .done(function(response, body, articleTitles){
-//       console.log("resp : " + response)
-//       var parsedRes = response.articles
-//       var ImageUrls = [];
-//       for (var i = 0; i < parsedRes.length; i++) {
-//           parsedRes[i]
+          // articleTitles.push(parsedRes[i].title)
+          console.log("article titles : " + articleTitles)
+        
           
-          
-            
-//             }
-//   $("#news").click(function() {
+                var images = parsedRes[i].urlToImage 
+                console.log("Images: " + images)
+                var a = $(`<a href=${parsedRes[i].url}></a>`)
+                console.log("a : " + a)
+                var img = $(`<img src="${images}" >`)
+                console.log("img : " + img)
+                a.append(img)
+                $('#image_display').append(a) 
 
-//     $("#display").text("headline : " + articleTitles);
-//        })
-//     })
-//   }    
-// imageGetter()
+
+            }
+              
+              var separatedTitles = articleTitles.join('<br>' + '<br>' + '<br>' + '<br>' + '<br>' +'<br>' + '<br>')
+
+             $("#article_display").html(separatedTitles);
+
+               })
+            })
+          }  
+
+
+function techGetter() {
+
+    var queryURL = 'https://newsapi.org/v2/top-headlines?' + 'sources=wired &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8';
+    console.log("query " + queryURL)
+ 
+    $("#tech").click(function() {
+    
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    })
+
+    .done(function(response, body){
+      console.log("resp : " + response)
+      var parsedRes = response.articles
+      var articleTitles = [];
+      var images = "";
+      var titles;
+      for (var i = 0; i < parsedRes.length; i++) {
+        parsedRes[i]
+          // var formattedTitles = parsedRes[i].split(",").join("<br />")
+
+
+          var articleString = articleTitles.push(parsedRes[i].title)
+          // articleTitles.split(',').join("<br />")
+
+          // articleTitles.push(parsedRes[i].title)
+          console.log("article titles : " + articleTitles)
+        
+          
+                var images = parsedRes[i].urlToImage 
+                console.log("Images: " + images)
+                var a = $(`<a href=${parsedRes[i].url}></a>`)
+                console.log("a : " + a)
+                var img = $(`<img src="${images}" >`)
+                console.log("img : " + img)
+                a.append(img)
+                $('#image_display').append(a) 
+
+
+            }
+              
+              var separatedTitles = articleTitles.join('<br>' + '<br>' + '<br>' + '<br>' + '<br>' +'<br>' + '<br>')
+
+             $("#article_display").html(separatedTitles);
+
+               })
+            })
+          }  
+techGetter()
 

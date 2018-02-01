@@ -1,12 +1,6 @@
 var express = require('express');
-var logger = require("morgan");
-var bodyParser = require("body-parser");
-var app = express();
-
-
 var axios = require("axios");
-var cheerio = require("cheerio");
-
+var app = express();
 
 
 app.use('/', express.static(__dirname));

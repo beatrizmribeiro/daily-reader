@@ -6,6 +6,13 @@ exports.index = function(req, res) {
 	res.render('index');
 };
 
+exports.discussion = function(req, res) {
+	res.render('discussion');
+}
+
+exports.about = function(req, res){
+	res.render('about');
+}
 
 exports.signup = function(req, res){
 

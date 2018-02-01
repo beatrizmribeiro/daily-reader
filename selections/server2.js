@@ -11,7 +11,7 @@ app.get('/articles', function(response, body){
   var parsedRes = response.articles
 
 
-    axios.get('https://newsapi.org/v2/top-headlines?' + 'sources=the-new-york-times &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8').then(function(response, body){
+    // axios.get('https://newsapi.org/v2/top-headlines?' + 'sources=the-new-york-times &' + 'apiKey=d13abbdf045a48efadfe6380e367c2d8').then(function(response, body){
 
     
         console.log("Response: ", response)
@@ -25,7 +25,6 @@ app.get('/articles', function(response, body){
     //   console.log("parsed res : " + parsedRes[i].title)
     //     }
       
-      }) 
 .fail(function(error) {
         if (error) {
             console.log(error)

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>News API Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://headervideo.github.io/hvheadervideo/css/fontawesome.min.css">
+    <link href="https://headervideo.github.io/hvheadervideo/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
+    <link href="https://headervideo.github.io/hvheadervideo/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/public/assets/selections/style.css">
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> -->
+  </head>
+
+    <body>
+
+      <header>
+    	<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    	    <a class="navbar-brand" href="/dashboard"><img src="/public/logo.png" style="width:105px;height:105px; margin-top: -35px;" alt="logo"></a>
+    	    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+    	        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    	    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+    	        <ul class="navbar-nav mr-auto">
+    	            <li class="nav-item">
+    	                <a class="nav-link" href="#"><i class="fa fa-facebook-f"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link" href="#"><i class="fa fa-twitter"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link" href="#"><i class="fa fa-instagram"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link" href="#"><i class="fa fa-pinterest"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link" href="#"><i class="fa fa-tumblr"></i></a>
+    	            </li>
+    	        </ul>
+    	         <ul class="navbar-nav ml-auto nav-flex-icons">
+    	            <li class="nav-item">
+    	                <a class="nav-link waves-effect waves-light">14 <i class="fa fa-envelope"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link waves-effect waves-light">8 <i class="fa fa-eye"></i></a>
+    	            </li>
+    	            <li class="nav-item">
+    	                <a class="nav-link waves-effect waves-light">1 <i class="fa fa-bullhorn"></i></a>
+    	            </li>
+    	        </ul>
+    	    </div>
+    	</nav>
+    	</header>
+
+
+
+
+
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+          <button type="button" class="btn btn-success" id="news">News</button>
+          <button type="button" class="btn btn-success" id="business">Business</button>
+          <button type="button" class="btn btn-success" id="sports">Sports</button>
+          <button type="button" class="btn btn-success" id="entertainment">Entertainment</button>
+          <button type="button" class="btn btn-success" id="health">Health</button>
+          <button type="button" class="btn btn-success" id="tech">Tech</button>
+            </div>
+          </div>
+
+        <div class="row">
+          <div class="col-md-6">
+            <div id = "article_display"></div>
+          </div>
+
+      <!--   <br></br><br></br><br></br> -->
+
+          <div class="col-md-6">
+            <div id = "image_display"></div>
+          </div>
+        </div>
+
+      </div>
+
+
+        <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="/public/assets/selections/selections.js"></script>
+      <script src="server.js"></script>
+    </body>
+</html>

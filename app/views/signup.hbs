@@ -23,7 +23,8 @@
 		  position: fixed;
 		  top: 0;
 		  left: 0;
-			opacity: 0.04;
+			opacity: 0.90;
+
 
 		}
 
@@ -32,9 +33,10 @@ form {
 position: absolute;
 
 
-		margin-left: 35%;
+		/* margin-left: 5%; */
 		width: 30%;
 		height: 30%;
+		margin-top: -30px;
 
 
 
@@ -46,10 +48,10 @@ input[type=text] {
     padding: 12px 20px;
     margin: 14px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 2px solid #FFFFFF;
     box-sizing: border-box;
 		  position: center;
-  margin-left: 40px;
+  margin-left: 37px;
     font-size: 80%;
 
 
@@ -60,10 +62,10 @@ input[type=email]{
 	padding: 12px 20px;
 	margin: 14px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 2px solid #FFFFFF;
 	box-sizing: border-box;
 		position: center;
-margin-left: 19px;
+margin-left: 10px;
 	font-size: 80%;
 
 
@@ -74,7 +76,7 @@ margin-left: 19px;
 	padding: 12px 20px;
 	margin: 8px 0;
 	display: inline-block;
-	border: 1px solid #ccc;
+	border: 2px solid #FFFFFF;
 	box-sizing: border-box;
 		position: center;
 margin-left: 47px;
@@ -101,7 +103,7 @@ h2 {
 	text-align: center;
 	font-size:200%;
 	margin-top: 80px;
-	color: black;
+	color: white;
 }
 
 .btn {
@@ -116,6 +118,13 @@ h2 {
     font-size:80%;
 		margin-left: 187px;
 }
+
+label{
+	color:white;
+	font-size: 17px;
+
+}
+
 
 
 </style>
@@ -132,12 +141,6 @@ h2 {
 	        aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 	    <div class="collapse navbar-collapse " id="navbarSupportedContent">
 	        <ul class="navbar-nav mr-auto">
-	            <li class="nav-item active">
-	                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-	            </li>
-	            <li class="nav-item active">
-	                <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
-	            </li>
 	            <li class="nav-item">
 	                <a class="nav-link" href="#"><i class="fa fa-facebook-f"></i></a>
 	            </li>
@@ -171,7 +174,7 @@ h2 {
 	<div class="header-unit " >
 	    <div id="video-container">
 	        <video autoplay loop class="fillWidth" >
-							<source src="./public/raininglettersBW.mp4" type="video/mp4"/>
+							<source src="./public/read.mp4" type="video/mp4"/>
 				</video>
 
 			</div>
@@ -185,16 +188,16 @@ h2 {
 					<h2 class="-text"><i class="fa fa-user white-text"></i> Register:</h2>
 							<hr class="hr-light">
 			</div>
-		<label for="email"><i class="fa fa-envelope "></i> Email Address:</label>
+		<label for="email"><i class="fa fa-envelope white-text font-weight-bold"></i> Email Address:</label>
 		<input class="text" name="email" type="email" />
 		<br>
-		<label for="firstname"><i class="fa fa-pencil "></i> First Name:</label>
+		<label for="firstname"><i class="fa fa-pencil white-text"></i> First Name:</label>
 		<input name="firstname" type="text" />
 		<br>
-		<label for="lastname"><i class="fa fa-pencil "></i> Last Name:</label>
+		<label for="lastname"><i class="fa fa-pencil white-text"></i> Last Name:</label>
 		<input name="lastname" type="text" />
 		<br>
-		<label for="password"><i class="fa fa-lock "></i> Password:</label>
+		<label for="password"><i class="fa fa-lock white-text"></i> Password:</label>
 		<input name="password" type="password" />
 		</div>
 		<br>

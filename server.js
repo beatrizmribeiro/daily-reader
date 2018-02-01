@@ -24,6 +24,8 @@ app.set('views', './app/views')
 app.engine('hbs', exphbs({extname: '.hbs'}));
 app.set('view engine', '.hbs');
 
+
+
 // static
 
 console.log(path.join(__dirname, 'public'));
@@ -34,6 +36,99 @@ app.get('/', function(req, res){
 	res.redirect('/index');
 });
 
+// Fetch a book page from gutemberg
+app.get('/bookcontent', function(req, res){
+  console.log("Fetching book ID: "+req.query.id + " Page number:"+ req.query.pagenumber )
+  var pagesize = 6000;
+
+  var options = {
+    url: "https://www.gutenberg.org/files/"+req.query.id+"/"+req.query.id+"-0.txt",
+    headers: {
+      'User-Agent': 'request',
+      'Accept': '*/*',
+      'Host': 'www.gutenberg.org'
+    }
+  };
+
+  var customHeaderRequest = request.defaults({
+    headers: {'User-Agent': 'request'}
+  })
+
+  customHeaderRequest.get(options, function (error, response, body) {
+    console.log('error:', error);
+    console.log('statusCode:', response && response.statusCode);
+
+    if (error!= null){
+      console.log("Error fetching page from gutemberg. Response:" + response + " error:" + error);
+      res.send('error');
+    }
+
+    page = GetPage(body, req.query.pagenumber, pagesize);
+    res.send(page);
+
+  });
+})
+
+
+
+function GetPage (text, page_number, page_size){
+    var book = text.split(" ");
+    console.log("Book Size = " + book.length);
+    var start= page_number * page_size;
+    var end  = (page_number * page_size) + page_size;
+
+    // check words is not longer than book
+    if (end >= book.length){
+          end = book.length-1;
+    }
+
+    if(book.length <1) {
+      return "";
+    }
+
+    var page = "";
+    for(var i = start; i <= end; i++) {
+      page += book[i]+" ";
+    }
+
+    return page;
+};
+app.get('/fake/GetBookList', function(req, res) {
+    res.json([{
+book_id: 1,
+author : 'Jose Ramirez',
+title : 'The little book of stuff',
+year: 1992,
+picture: "https://upload.wikimedia.org/wikipedia/commons/b/b0/A_Popular_Schoolgirl_-_book_cover_-_Project_Gutenberg_eText_18505.jpg"
+},
+{
+book_id: 2,
+author: 'Anna Frank',
+title: 'The diary of anna frank',
+year: 1947,
+picture: "https://upload.wikimedia.org/wikipedia/commons/3/3e/The_Moving_Picture_Boys_on_the_War_Front_-_Cover_-_Project_Gutenberg_etext_17744.jpg"
+},
+{
+book_id:3,
+author: 'Jhon Smith',
+title: 'Peter Pan the book',
+year:1925,
+picture:"https://www.gutenberg.org/files/26998/26998-h/images/img-cover.jpg"
+}
+
+]);
+});
+
+
+
+app.get('/fake/GetLastPageRead', function(req, res) {
+    res.json({page_number: 3});
+});
+
+
+app.post('/fake/SetLastPageRead', function(req, res) {
+    res.json({message:ok});
+});
 
 
 

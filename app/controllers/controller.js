@@ -10,8 +10,8 @@ exports.discussion = function(req, res) {
 	res.render('discussion');
 }
 
-exports.about = function(req, res){
-	res.render('about');
+exports.bookList = function(req, res){
+	res.render('bookList');
 }
 
 exports.signup = function(req, res){

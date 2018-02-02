@@ -13,15 +13,17 @@ function newsGetter() {
       console.log("resp : " + response)
       var parsedRes = response.articles
       var articleTitles = [];
+      var articleDescription = [];
       var images = "";
       var titles;
       for (var i = 0; i < parsedRes.length; i++) {
         parsedRes[i]
-          // var formattedTitles = parsedRes[i].split(",").join("<br />")
-
-
+        console.log(parsedRes[1].description)
           var articleString = articleTitles.push(parsedRes[i].title)
-          // articleTitles.split(',').join("<br />")
+          console.log(article_display)
+
+          var articleDescriptionArray = articleDescription.push(parsedRes[i].description)
+     
 
           // articleTitles.push(parsedRes[i].title)
           console.log("article titles : " + articleTitles)
@@ -42,14 +44,16 @@ function newsGetter() {
               // console.log(titlesString)
               // var removeCommas = articleTitles.split(',').join('<br>' + '<br>' + '<br>' + '<br>' + '<br>' +'<br>' + '<br>' );
               // console.log(removeCommas)
-              var separatedTitles = articleTitles.join('<br>' + '<br>' + '<br>' + '<br>' + '<br>' +'<br>' + '<br>')
+              var separatedTitles = articleTitles.join('<br>' + '<br>' + '<br>' + '<br>' + '<br>' + '<br>')
+              var separatedDescriptions = articleDescription.join('<br>' + '<br>' + '<br>')
 
              $("#article_display").html(separatedTitles);
+             $("#article_description").html(separatedDescriptions);
+
 
                })
             })
-          }  
-
+        }
 
 newsGetter()
 

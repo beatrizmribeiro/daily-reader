@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Libre+Barcode+39|Special+Elite" rel="stylesheet">
+
     <link rel="stylesheet" href="https://headervideo.github.io/hvheadervideo/css/fontawesome.min.css">
     <link href="https://headervideo.github.io/hvheadervideo/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://headervideo.github.io/hvheadervideo/css/mdb.min.css" rel="stylesheet">
@@ -63,7 +64,8 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-          <button type="button" class="btn btn-success" id="news">News</button>
+              <div id="nav">
+          <button type="button" class="btn btn-success" id="news">Current Events</button>
           <button type="button" class="btn btn-success" id="business">Business</button>
           <button type="button" class="btn btn-success" id="sports">Sports</button>
           <button type="button" class="btn btn-success" id="entertainment">Entertainment</button>
@@ -71,18 +73,21 @@
           <button type="button" class="btn btn-success" id="tech">Tech</button>
             </div>
           </div>
+        </div>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div id = "article_display"></div>
-          </div>
+          </div>  
 
-      <!--   <br></br><br></br><br></br> -->
+          <div class="col-md-4">
+            <div id ="article_description"></div>
+          </div>  
 
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div id = "image_display"></div>
           </div>
-        </div>
+        </div> 
 
       </div>
 

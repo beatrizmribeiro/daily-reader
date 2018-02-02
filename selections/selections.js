@@ -30,6 +30,7 @@ function newsGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)
@@ -89,6 +90,7 @@ function businessGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)
@@ -147,6 +149,7 @@ function sportsGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)
@@ -209,6 +212,7 @@ function entertainmentGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)
@@ -266,6 +270,7 @@ function healthGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)
@@ -318,6 +323,7 @@ function techGetter() {
                 var images = parsedRes[i].urlToImage 
                 console.log("Images: " + images)
                 var a = $(`<a href=${parsedRes[i].url}></a>`)
+                a.attr("target", "_blank");
                 console.log("a : " + a)
                 var img = $(`<img src="${images}" >`)
                 console.log("img : " + img)

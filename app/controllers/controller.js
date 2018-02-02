@@ -30,6 +30,11 @@ exports.dashboard = function(req, res) {
 	res.render('dashboard');
 }
 
+exports.articles = function(req, res) {
+
+	res.render('articles');
+}
+
 exports.logout = function(req, res){
 
 	req.session.destroy(function(err){

@@ -1,0 +1,18 @@
+img{
+	height: 200px;
+	width: 300px;
+	padding: 20px;
+}
+
+#article_display{
+	font-size: 18px;
+	padding: 20px;
+	padding-top: 80px;
+	font-family: 'Cinzel', serif, bold
+}
+
+
+.container
+{
+	margin-top: 8%;
+}

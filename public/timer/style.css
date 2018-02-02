@@ -1,0 +1,47 @@
+#container{
+	background-color: black;
+}
+
+#header{
+	text-align: center;
+	color: white;
+}
+
+h2{
+	color: white;
+}
+
+#time{
+	text-align: center;
+}
+
+#minutes{
+	border-width: 10px;
+	border-color: red;
+	border-style: double;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #6bf442;
+
+}
+
+#start{
+	color: red;
+	margin-left: 155px;
+	font-size: 25px;
+}
+
+#seconds{
+	border-width: 10px;
+	border-color: red;
+	border-style: double;
+	font-family: 'Orbitron', sans-serif;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	color: #6bf442;
+}

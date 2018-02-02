@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Cinzel:700" rel="stylesheet">
-    <link rel="stylesheet" href="../selections/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cinzel:700|Libre+Barcode+39|Special+Elite" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
     <!-- <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script> -->
   </head>
  
@@ -14,7 +15,8 @@
         <div class="container">
           <div class="row">
             <div class="col-12">
-          <button type="button" class="btn btn-success" id="news">Fuck</button>
+              <div id="nav">
+          <button type="button" class="btn btn-success" id="news">Current Events</button>
           <button type="button" class="btn btn-success" id="business">Business</button>
           <button type="button" class="btn btn-success" id="sports">Sports</button>
           <button type="button" class="btn btn-success" id="entertainment">Entertainment</button>
@@ -22,15 +24,18 @@
           <button type="button" class="btn btn-success" id="tech">Tech</button>
             </div>
           </div>
+        </div>
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div id = "article_display"></div>
           </div>  
-        
-      <!--   <br></br><br></br><br></br> -->
 
-          <div class="col-md-6">
+          <div class="col-md-4">
+            <div id ="article_description"></div>
+          </div>  
+
+          <div class="col-md-4">
             <div id = "image_display"></div>
           </div>
         </div> 
@@ -40,7 +45,7 @@
 
         <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-      <script src="selections/selections.js"></script>
-     <!--  <script src="../selections/server2.js"></script> -->
+      <script src="selections.js"></script>
+      <script src="server2.js"></script>
     </body>
 </html>

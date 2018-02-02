@@ -36,12 +36,7 @@ app.get('/', function(req, res){
 	res.redirect('/index');
 });
 
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 68445506bb94c876dd44cbfeb7063e67b0bfdc21
 //Models
 var models = require("./app/models");
 

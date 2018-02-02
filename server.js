@@ -36,12 +36,34 @@ app.get('/', function(req, res){
 	res.redirect('/index');
 });
 
-
 //Models
 var models = require("./app/models");
 
 //Routes
 var authRoute = require('./app/routes/auth.js')(app, passport);
+
+app.get('/articles', function(response, body){
+
+  var parsedRes = response.articles
+    
+        console.log("Response: ", response)
+        console.log("Body: ", body)
+
+    // for (var i = 0; i < parsedRes.length; i++) {
+    //   parsedRes[i]
+    //   console.log(parsedRes[i].title)
+    //   document.getElementById('display').text(parsedRes[i].title)
+
+    //   console.log("parsed res : " + parsedRes[i].title)
+    //     }
+
+.fail(function(error) {
+        if (error) {
+            console.log(error)
+              }
+        })
+    })
+
 
 
 //load passport

@@ -8,7 +8,11 @@ module.exports = function(app, passport) {
 
 	app.get('/index', controller.index);
 
+	app.get('/discussion', controller.discussion);
 
+	app.get('/about', controller.about);
+
+	app.get('/articles', controller.articles);
 
 
 	app.post('/signup', passport.authenticate('local-signup', {

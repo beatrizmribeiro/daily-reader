@@ -6,6 +6,13 @@ exports.index = function(req, res) {
 	res.render('index');
 };
 
+exports.discussion = function(req, res) {
+	res.render('discussion');
+}
+
+exports.about = function(req, res){
+	res.render('about');
+}
 
 exports.signup = function(req, res){
 
@@ -21,6 +28,11 @@ exports.signin = function(req, res){
 exports.dashboard = function(req, res) {
 
 	res.render('dashboard');
+}
+
+exports.articles = function(req, res) {
+
+	res.render('articles');
 }
 
 exports.logout = function(req, res){
